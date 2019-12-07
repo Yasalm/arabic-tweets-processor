@@ -4,7 +4,7 @@ A Command Line Application that assumes a column named ```text``` containes the 
 utils could also be used as a stand-alone. As all its inputes asssumes a type of Pandas Series. 
 
 
-## Installation & dependencies <a name="Installation & dependencies"></a>
+## Installation & Dependencies <a name="Installation & dependencies"></a>
 
 - Anaconda disrtbution with python vesion of 3^. should includes the necessary packages.
 - emoji
