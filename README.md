@@ -1,7 +1,7 @@
 # arabic-tweets-processor
 an arabic tweets processor it built on the assumptions of gulf dialect as majority of stop words and other depends on this assumption.
-Have Command Line Application that assumpe a column name ```text``` containes the tweets to be processed and cleaned for model building.
-and also utils can be used as a stand-alone functions. all its inputes asssumes a type of Pandas Series. 
+A Command Line Application that assumpe a column name ```text``` containes the tweets to be processed and cleaned for model building.
+utils could also be used as a stand-alone. As all its inputes asssumes a type of Pandas Series. 
 
 
 ## Installation & dependencies <a name="Installation & dependencies"></a>
