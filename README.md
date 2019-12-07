@@ -18,7 +18,7 @@ and also utils can be used as a stand-alone functions. all its inputes asssumes 
 - nltk
 
 
-## Command Line Application
+## Command Line Application <a name="Commaned Line Application"></a>
 
 - Cleans and return 3 csv files. on a data set with text column containing tweets. **clean.py** 
   - Basic Usage : ```python clean.py data_path```<br/>
