@@ -69,7 +69,7 @@ def clean_data():
         data_pro, _ = processer.proccess_data(data.text, handle_emojies=handle_emojies)
 
         data_pro = pd.DataFrame(data_pro, columns=['text'])
-        data_pro.append(data['label'])
+#         data_pro.append(data['label'])
         data_pro.to_csv('cleaned.csv', index=False)
 
         elapsed_time = time.time() - start_time
