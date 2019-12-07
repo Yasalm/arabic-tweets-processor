@@ -4,13 +4,6 @@ Have Command Line Application that assumpe a column name ```text``` containes th
 and also utils can be used as a stand-alone functions. all its inputes asssumes a type of Pandas Series. 
 
 
-
-### Table of Contents
-
-1. [Installation & dependencies](#Installation & dependencies)
-2. [Commaned Line Application](#Command Line Application)
-
-
 ## Installation & dependencies <a name="Installation & dependencies"></a>
 
 - Anaconda disrtbution with python vesion of 3^. should includes the necessary packages.
