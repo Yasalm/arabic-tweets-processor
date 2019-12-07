@@ -16,6 +16,9 @@ and also utils can be used as a stand-alone functions. all its inputes asssumes 
 - Anaconda disrtbution with python vesion of 3^. should includes the necessary packages.
 - emoji
 - nltk
+- arabic_reshaper
+- bidi.algorithm 
+- wordcloud 
 
 
 ## Command Line Application <a name="Commaned Line Application"></a>
@@ -27,6 +30,6 @@ and also utils can be used as a stand-alone functions. all its inputes asssumes 
     - Set filename: ```python clean.py data_path --filename filename_of_extracted_feautres```
     - set how to handle emojies for cleaning: ```python clean.py data_path --handle_emojies remove_or_emoticion_or_emoji```
   - Output: A ```3 csv files``` 
-  - 1. containes the cleand version of ```text``` 
-  - 2. containes the term frequency of each word in tweets.
-  - 3. containes the original tweets with extracted features.
+    - containes the cleand version of ```text``` 
+    - containes the term frequency of each word in provided tweets.
+    - containes the original tweets with extracted features.
