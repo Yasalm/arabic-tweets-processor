@@ -419,5 +419,5 @@ def df_to_pdf(df, filename):
 
         os.remove(filename+'.html')
 
-    except ImportError:
-       raise MissingDependency
+    except:
+       pass
