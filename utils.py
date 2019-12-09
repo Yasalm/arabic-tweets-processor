@@ -8,6 +8,9 @@ from nltk.corpus import stopwords
 import os
 
 
+
+
+
 ar_stp = pd.read_fwf('stop_words.txt', header=None)
 stop_words = set(stopwords.words('arabic') + list(ar_stp[0]))
 
@@ -244,7 +247,7 @@ def get_arabic_words(arr, handle_emojies='emoticon', remove_repeated_char=True):
     takes an array of texts and return only arabic words
     Arguments:
     arr: Series. array of tweets.
-    handle_emojies: String. emotiocon or emojie or remove. How to handle emojies either to keep it as emoji or remove
+    handle_emojies: String. emotiocon or keep or remove. How to handle emojies either to keep it as emoji or remove
     or keep the emoticon of an emoji
     remove_repeated_char: boolean. if True remove charactars that are repeated e.g ( احببب : احب), default True.
     Returns:
@@ -256,6 +259,8 @@ def get_arabic_words(arr, handle_emojies='emoticon', remove_repeated_char=True):
 
     # keep only arabic words
     # print(f" : {arr}")
+
+
 
     arr_text = [" ".join(word for word in re.split('#|_', text)) for text in arr]
     arr_text = [text.replace('،', ' ') for text in arr_text]
@@ -278,7 +283,7 @@ def get_arabic_words(arr, handle_emojies='emoticon', remove_repeated_char=True):
             merged = text + emot # two lists..
             new_arr.append(' '.join(merged))
 
-    if handle_emojies.lower() == 'emojie':
+    if handle_emojies.lower() == 'keep':
         arr_emojies = [re.findall(emoji.get_emoji_regexp(), text) for text in arr]
 
         for text, emoj in zip(arr_list_of_words, arr_emojies):
@@ -394,7 +399,7 @@ def _get_emoticon(arr):
 
 def df_to_pdf(df, filename):
     """
-    (Required dependencies: https://pypi.org/project/pdfkit/)
+    (Required dependencie: https://pypi.org/project/pdfkit/)
 
     takes a dataframe and create a pdf page
     Arguments:
