@@ -261,7 +261,9 @@ def get_arabic_words(arr, handle_emojies='emoticon', remove_repeated_char=True):
     # print(f" : {arr}")
 
 
-
+    if handle_emojies not in ['keep', 'remove', 'emoticon']:
+        raise ValueError(f'Passed argument {handle_emojies} not a recognised argument.')
+        
     arr_text = [" ".join(word for word in re.split('#|_', text)) for text in arr]
     arr_text = [text.replace('،', ' ') for text in arr_text]
 
