@@ -28,8 +28,6 @@ filename = args.filename
 if not os.path.isfile(data_path):
     raise ValueError(f'file {data_path} not found')
 
-if handle_emojies not in ['keep', 'remove', 'emoticon']:
-    raise ValueError(f'Passed argument {handle_emojies} not a recognised argument.')
 
 def clean_data():
 
