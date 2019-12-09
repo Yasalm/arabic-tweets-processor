@@ -15,7 +15,7 @@ parser.add_argument(
 parser.add_argument(
     '--filename', help="file name of cleaned data. Don't include .csv. default= extracted", type=str, default='extracted')
 parser.add_argument(
-    '--handle_emojies', help='How to handle emojies. [remove] to remove emojies. [emoticon] to keep emoticon. [emoji] to keep emojies، default=[emoticon]', type=str, default='emoticon')
+    '--handle_emojies', help='How to handle emojies. [remove] to remove emojies. [emoticon] to keep emoticon. [keep] to keep emojies، default=[emoticon]', type=str, default='emoticon')
 
 
 args = parser.parse_args()
@@ -28,6 +28,8 @@ filename = args.filename
 if not os.path.isfile(data_path):
     raise ValueError(f'file {data_path} not found')
 
+if handle_emojies not in ['keep', 'remove', 'emoticon']:
+    raise ValueError(f'Passed argument {handle_emojies} not a recognised argument.')
 
 def clean_data():
 
@@ -69,7 +71,7 @@ def clean_data():
         data_pro, _ = processer.proccess_data(data.text, handle_emojies=handle_emojies)
 
         data_pro = pd.DataFrame(data_pro, columns=['text'])
-#         data_pro.append(data['label'])
+        data_pro.append(data['label'])
         data_pro.to_csv('cleaned.csv', index=False)
 
         elapsed_time = time.time() - start_time
@@ -81,3 +83,5 @@ def clean_data():
 
 if __name__ == "__main__":
     clean_data()
+
+
