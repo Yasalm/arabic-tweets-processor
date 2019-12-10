@@ -21,7 +21,7 @@ utils could also be used as a stand-alone. As all its inputes asssumes a type of
   - Options:
     - Set the mode : ```python clean.py --data_path data --mode mode_of_process``` for now only clean is implemented.
     - Set filename: ```python clean.py data_path --filename filename_of_extracted_feautres```
-    - Set how to handle emojies for cleaning: ```python clean.py --data_path --handle_emojies remove_or_emoticion_or_emoji```
+    - Set how to handle emojies for cleaning: ```python clean.py --data_path --handle_emojies remove_or_keep_or_emoticion```
   - Output: A ```3 csv files``` 
     - containes the cleand version of ```text``` 
     - containes the term frequency of each word in provided tweets.
